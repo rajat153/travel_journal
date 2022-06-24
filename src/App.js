@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Data from "./data";
 
-function App() {
+export default function App() {
+  let travel = Data.map((item) => {
+    //console.log(item)
+    return (
+      <Main
+        key={item.id} //anytime when using map we need key
+        item={item}
+      />
+    );
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      {travel}
+    </>
   );
 }
-
-export default App;
