@@ -6,7 +6,7 @@ export default function (props) {
       <div className="main">
         <img src={props.item.img} className="main-img" />
         <div className="main-info">
-          <img src="../images/fill1.png"  className="location-tag"/>
+          <img src="./images/fill1.png"  className="location-tag"/>
           <span className="country">{props.item.country}</span>
           <span className="view">
             <u>View on Google Maps</u>
